@@ -1,0 +1,1 @@
+1) First question that comes to my mind is, in the objective section conversion rate for an individual flight is desired. However, conversion rate can only be calculated from the "completed" transactions. I'm not sure how we can calculate the conversion rate when we are asked to focus only on the search and search result pages.
