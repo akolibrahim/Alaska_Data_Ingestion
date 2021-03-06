@@ -1,0 +1,58 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Flight_Search_Results",
+  "Title": "Flight Search Results Page",
+  "URL": "https://www.alaskaair.com/Shopping/Flights/Schedule",
+  "Available_Award_Flights": {
+    "@type": "View Type",
+    "Schedule": {
+      "@type": "View Type",
+      "name": "View By Schedule",
+	  "Departing_Flight": { 
+			"Description": "Choose Departing Flight", "@Type": "String",
+			"Details": "javascript://show details",
+			"Preview_Seats": "https://www.alaskaair.com/Shopping/Flights/Shop#seats"
+			},
+	  "Returning_Flight": { 
+			"Description": "Choose Returning Flight", "@Type": "String",
+			"Details": "javascript://show details",
+			"Preview_Seats": "https://www.alaskaair.com/Shopping/Flights/Shop#seats"
+			},
+	  "Main": { "Description": "Main Cabin", "@Type": "String" },
+	  "First_Class": { "Description": "First Class Cabin", "@Type": "String" },
+	  "Filter_Results": {  
+			"Stops": { 
+				"Nonstop": { "Description": "Nonstop", "@Type": "String" },
+				"Onestop": { "Description": "One Stop", "@Type": "String" },
+				"Twostops": { "Description": "Two Stops", "@Type": "String" },
+				},
+			"Airlines": { 
+				"Alaska": { "Description": "Alaska Airlines", "@Type": "String" },
+				},
+			"Nearby_Airports": { "Description": "Nearby Airports", "@Type": "String" },
+			"Upgrade": { 
+				"NoPreference": { "Description": "No Preference", "@Type": "String" },
+				"MVP": { "Description": "MVP", "@Type": "String" },
+				"MVPGold": { "Description": "MVP Gold", "@Type": "String" },
+				"MVPGold75k": { "Description": "MVP Gold 75k", "@Type": "String" },
+				},
+		},
+	  "Sortby": [
+			{ "Description": "Sort by List", "@Type": "ListItem", "Position": 1, "Name": "Stops", "item": "https://www.alaskaair.com/Shopping/Flights/ScheduleSort/0?lid=shopping:awards_as.com::sort_by_stops" },
+			{ "Description": "Sort by List", "@Type": "ListItem", "Position": 2, "Name": "Price", "item": "https://www.alaskaair.com/Shopping/Flights/ScheduleSort/0?lid=shopping:awards_as.com::sort_by_price" },
+			{ "Description": "Sort by List", "@Type": "ListItem", "Position": 3, "Name": "Duration", "item": "https://www.alaskaair.com/Shopping/Flights/ScheduleSort/0?lid=shopping:awards_as.com::sort_by_duration" },
+			{ "Description": "Sort by List", "@Type": "ListItem", "Position": 4, "Name": "Departure", "item": "https://www.alaskaair.com/Shopping/Flights/ScheduleSort/0?lid=shopping:awards_as.com::sort_by_departure" },
+			{ "Description": "Sort by List", "@Type": "ListItem", "Position": 5, "Name": "Arrival", "item": "https://www.alaskaair.com/Shopping/Flights/ScheduleSort/0?lid=shopping:awards_as.com::sort_by_arrival" },
+			{ "Description": "Sort by List", "@Type": "ListItem", "Position": 6, "Name": "PreferAlaska", "item": "https://www.alaskaair.com/Shopping/Flights/ScheduleSort/0?lid=shopping:awards_as.com::sort_by_prefer_alaska" },
+		],
+    "Compare_Award_Types": { "$Ref": "javascript://Compare Award Types;" },
+	"Join_Mileage_Plan_Now": { "$Ref": "https://www.alaskaair.com/www2/ssl/myalaskaair/MyAlaskaAir.aspx?currentform=UCMPEnrollment" }
+	"Change_Search": { "$Ref": "javascript:ChangeAvailSearch();" },
+	"Clear_All_Selections": { "$Ref": "javascript:ClearAllSelections();" },
+	"Currency_Converter": { "$Ref": "https://www.alaskaair.com/Shopping/Flights/Shop#" },
+	"Contact_Us": { "$Ref": "https://www.alaskaair.com/content/about-us/contact-us/online-help.aspx?lid=AvailFlights:Award:Sched::contactUs" },
+	"Required": [ "Departing_Flight", "Returning_Flight"]
+  }
+}
+</script>

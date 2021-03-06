@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "Manage_Trip",
+	"Title": "Manage Trip Page",
+	"URL": "https://www.alaskaair.com/#manage",
+	"Passengers_Last_Name": { "Description": "Passengers Last Name", "@Type": "String" },
+	"Confirmation_Code": { "Description": "Confirmation Code or E-Ticket", "@Type": "integer" },
+	"View_Hotel_Car": { "Description": "View Hotel or Car Reservation", "$Ref": "https://www.alaskaair.com/content/traveling/manage-car-hotel-reservation?lid=nav:manage-view-ancillary-reservation" },
+	"Required": [ "Passengers_Last_Name", "Confirmation_Code"]
+  }
+}
+</script>

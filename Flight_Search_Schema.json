@@ -1,0 +1,48 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Flight_Search",
+  "Title": "Flight Search Page",
+  "URL": "https://www.alaskaair.com/",
+  "Book_Type": {
+    "@type": "Book Type",
+    "Both_Ways": {
+      "@type": "Book Type",
+      "name": "Both Ways",
+	  "From": { "Description": "From City,Country", "@Type": "String" },
+	  "To": { "Description": "To Destination City,Country", "@Type": "String" },
+	  "Departure_Date": { "Description": "Departure Date", "@Type": "DateStamp" },
+	  "Return_Date": { "Description": "Return Date", "@Type": "DateStamp" },
+	  "Adults": { "Description": "Number of Adults Travelling", "@Type": "integer" },
+	  "Children": { "Description": "Number of Children Travelling", "@Type": "integer" },
+	  "Use_Miles": { "Description": "Use Miles Check Box", "@Type": "selection" }
+    },
+	"One_Way": {
+      "@type": "Book Type",
+      "name": "One Way",
+	  "From": { "Description": "From City,Country", "@Type": "String" },
+	  "To": { "Description": "To Destination City,Country", "@Type": "String" },
+	  "Departure_Date": { "Description": "Departure Date", "@Type": "DateStamp" },
+	  "Adults": [{ 
+			"Description": "Number of Adults Travelling", "@Type": "integer",
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 1, "Name": "1 Adult" },
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 2, "Name": "2 Adults" },
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 3, "Name": "3 Adults" },
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 4, "Name": "4 Adults" },
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 5, "Name": "5 Adults" },
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 6, "Name": "6 Adults" },
+			{ "Description": "Adults", "@Type": "ListItem", "Position": 7, "Name": "7 Adults" },
+		}],
+	  "Children": [{ 
+			"Description": "Number of Children Travelling", "@Type": "integer" ,
+			{ "Description": "Children", "@Type": "ListItem", "Position": 1, "Name": "0 Ages 2-17" },
+			{ "Description": "Children", "@Type": "ListItem", "Position": 2, "Name": "0 Under (on lap)" },
+		}]
+	"Use_Miles": { "Description": "Use Miles Check Box", "@Type": "selection" }
+    },
+    "All_Search_Options": { "$Ref": "https://www.alaskaair.com/planbook?lid=form:all-search-options" },
+	"Use_Discount_or_Companion_Fare_Code": { "$Ref": "https://www.alaskaair.com/planbook?lid=form:use-discount-code" }
+	"Required": [ "From", "To", "Departure_Date"]
+  }
+}
+</script>
