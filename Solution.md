@@ -18,4 +18,4 @@ By extracting data from alaskaair.com we can do:
   2) Analyze/Predict customer shopping trends.
   3) Learn about the customer choices and purchase patterns.
   4) New flight destination launch research.
-  5) Understanding your travel booking funnel.
+  5) Understanding your travel booking funnel and what users are searching for.
