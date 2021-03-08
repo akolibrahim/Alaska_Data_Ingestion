@@ -14,7 +14,7 @@
 	  "Departure_Date": { "Description": "Departure Date", "@Type": "DateStamp" },
 	  "Return_Date": { "Description": "Return Date", "@Type": "DateStamp" },
 	  "Adults": [{ 
-			"Description": "Number of Adults Travelling", "@Type": "integer",
+			"Description": "Number of Adults Travelling", "@Type": "integer"
 			{ "Description": "Adults", "@Type": "ListItem", "Position": 1, "Name": "1 Adult" },
 			{ "Description": "Adults", "@Type": "ListItem", "Position": 2, "Name": "2 Adults" },
 			{ "Description": "Adults", "@Type": "ListItem", "Position": 3, "Name": "3 Adults" },
