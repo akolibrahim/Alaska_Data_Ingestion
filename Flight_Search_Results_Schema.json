@@ -51,7 +51,7 @@
 			"Main": { "Description": "Fare Type - Main", "@Type": "String" },
 			"First_Class": { "Description": "Fare Type - First Class", "@Type": "String" },
 		},
-	"Join_Mileage_Plan_Now": { "$Ref": "https://www.alaskaair.com/www2/ssl/myalaskaair/MyAlaskaAir.aspx?currentform=UCMPEnrollment" }
+	"Join_Mileage_Plan_Now": { "$Ref": "https://www.alaskaair.com/www2/ssl/myalaskaair/MyAlaskaAir.aspx?currentform=UCMPEnrollment" },
 	"Change_Search": { "$Ref": "javascript:ChangeAvailSearch();" },
 	"Clear_All_Selections": { "$Ref": "javascript:ClearAllSelections();" },
 	"Currency_Converter": { "$Ref": "https://www.alaskaair.com/Shopping/Flights/Shop#" },
