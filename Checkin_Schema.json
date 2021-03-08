@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "Flight_Check_in",
+	"Title": "Flight Check-in Page",
+	"URL": "https://www.alaskaair.com/#checkin",
+	"Departure_City": { "Description": "Departure City", "@Type": "String" },
+	"Look_up_Reservation": [
+		{ "Description": "Look up Reservation", "@Type": "ListItem", "Position": 1, "Name": "Confirmation_Code", "Confirmation_Code": "6 Letters From Alaska" },
+		{ "Description": "Look up Reservation", "@Type": "ListItem", "Position": 2, "Name": "E_Ticket_Number", "E_Ticket_Number": "10 or 13 Numbers" },
+		{ "Description": "Look up Reservation", "@Type": "ListItem", "Position": 3, "Name": "Mileage_Plan_#", "Mileage_Plan_#": "Alaska Mileage Plan #" },
+	],
+	"Required": [ "Departure_City", "Look_up_Reservation"]
+  }
+}
+</script>

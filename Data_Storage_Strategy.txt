@@ -1,0 +1,82 @@
+Data Storage Strategy in a DB
+
+1) Load Adobe Analytics data feed into Azure Data Lake
+	A) Adobe data feeds support Azure Blob destinations. After we land the Adobe Clickstream data on Azure Data Lake we can copy that data from Azure Blob to SQL Database using ADF (data pipeline). 
+		Alternatively, we can create Databricks table from Azure Blob for analytics.
+
+	B) Our "Search", "Search Results", and "Confirmed Transactions" tables would look similar to below structures (high level structure):
+		
+		create table dbo.search
+		(
+			from_ varchar(120) Not NULL,
+			to_ varchar(120),
+			departure_date date Not NULL,
+			return_date date,
+			adults varchar(16) Not NULL,
+			children varchar(16),
+			load_date date,
+			visitor_id integer Not NULL Primary Key,
+			date_time date
+		)
+		
+		create table dbo.search_results
+		(
+			Departing_Flight varchar(120) Not NULL,
+			Returning_Flight varchar(120),
+			Fare_Type varchar(64),
+			Stops varchar(16),
+			Airlines varchar(64),
+			Nearby_Airports varchar(64),
+			Upgrades varchar(64),
+			Sortby varchar(32),
+			view_type varchar(16),
+			load_date date,
+			visitor_id integer Not NULL Primary Key,
+			date_time date
+		)
+		
+		create table dbo.confirmed_transactions
+		(
+			from_ varchar(120) Not NULL,
+			to_ varchar(120),
+			airport_id varchar(64),
+			airline_id varchar(64),
+			departure_date date Not NULL,
+			return_date date,
+			adults varchar(16) Not NULL,
+			children varchar(16),
+			Departing_Flight varchar(120) Not NULL,
+			Returning_Flight varchar(120),
+			Stops varchar(16),
+			Upgrades varchar(64),
+			load_date date,
+			visitor_id integer Not NULL Primary Key,
+			date_time date
+		)
+		
+		*** Loading the Blob data into a Databricks Table (example):
+		Clickstream_Dat=spark.read.format("parquet")\
+		  .option("inferSchema", "false")\
+		  .option("header", "true")\
+		  .option("sep", ",")\
+		  .load(clickstream_dat_loc)
+		  
+		clickstream_dat.write.format("parquet").mode("append").saveAsTable('dbo.clickstream')
+		
+	C) Pros/Cons:
+		1) Fast and Reliable
+		2) Cloud based
+		3) Alaska already has this!
+		4) Low cost storage
+		5) Skillset and learning curve
+		6) Common cloud computing problems (backup protection, privacy issues, limited control, etc.)
+		
+2) Load Adobe Analytics data feed into Amazon AWS S3
+	A) Similar to Azure Blob, Adobe Clickstream data can be copied into Amazon S3 bucket.
+	
+	B) Pros/Cons:
+		1) Fast and secure
+		2) Pay as you go for the services
+		3) Cloud based
+		4) Could be expensive
+		5) Common cloud computing problems (backup protection, privacy issues, limited control, etc.)
