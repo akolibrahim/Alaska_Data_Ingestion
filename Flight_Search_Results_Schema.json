@@ -56,7 +56,7 @@
 	"Clear_All_Selections": { "$Ref": "javascript:ClearAllSelections();" },
 	"Currency_Converter": { "$Ref": "https://www.alaskaair.com/Shopping/Flights/Shop#" },
 	"Contact_Us": { "$Ref": "https://www.alaskaair.com/content/about-us/contact-us/online-help.aspx?lid=AvailFlights:Award:Sched::contactUs" },
-	"Required": [ "Departing_Flight", "Compare_Fare_Types"]
+	"Required": [ "Departing_Flight", "Compare_Fare_Types"],
   }
 }
 </script>
