@@ -10,7 +10,7 @@
 		{ "Description": "Departing", "@Type": "ListItem", "Position": 3, "Name": "Tomorrow" },
 	],
 	"Flight_Number": { "Description": "Flight Number", "@Type": "String" },
-	"From": { "Description": "From Destination", "@Type": "String", }
+	"From": { "Description": "From Destination", "@Type": "String", },
 	"To": { "Description": "To Destination", "@Type": "String", },
 	"Departure_Date": { "Description": "Departure Date", "@Type": "Date", },
   }
