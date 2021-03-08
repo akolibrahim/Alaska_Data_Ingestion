@@ -14,6 +14,7 @@
     i) Demanded flight routes. What flight destinations have the most demand from guests?
     ii) Are customers willing to pay more when there is less time before departure time?
     ii) In which markets and on what days people are likely to book/pay more?
+7) Star_Schema_Sample.jpg file contains a high level sample presentation of how the data mart could look like for Alaska. For this data model we are assuming we have captured      all the information related to search, customers, transactions, etc.
 
 # Notes:
 
